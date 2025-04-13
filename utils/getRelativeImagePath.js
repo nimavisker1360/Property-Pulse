@@ -4,6 +4,6 @@ export default function getRelativeImagePath(fileName) {
     return fileName;
   }
 
-  // Otherwise, prepend the path for local images
-  return `${process.env.NEXT_PUBLIC_DOMAIN}/properties/${fileName}`;
+  // For local files, simply use the relative path
+  return `/properties/${fileName}`;
 }
